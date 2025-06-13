@@ -26,7 +26,7 @@ struct BackgroundMainView: View {
                             .resizable()
                             .scaledToFill()
                     } placeholder: {
-                        Color.white
+                        Color.black
                     }
                     Rectangle()
                         .frame(width: 50)
@@ -42,10 +42,7 @@ struct BackgroundMainView: View {
     }
 }
 
-
-
-
 #Preview {
-    BackgroundMainView(urlImage: "/uQ4lG7E7mlyKsGvbASftQ6Hu2IX.jpg", height: 8/13)
+    BackgroundMainView(urlImage: "/uQ4lG7E7mlyKsGvbASftQ6Hu2IX.jpg", height: 1)
 }
 

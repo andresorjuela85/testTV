@@ -16,7 +16,7 @@ struct DetailMainView: View {
         GeometryReader { geometry in
             VStack(alignment: .leading, spacing: 10) {
                 
-                Text(focusField?.mediaType.rawValue ?? "")
+                Text(focusField?.mediaType?.rawValue ?? "")
                     .font(.title3)
                     .fontWeight(.semibold)
                 

@@ -28,9 +28,9 @@ struct Result: Codable, Hashable {
     let id: Int
     let name, originalName: String?
     let overview, posterPath: String
-    let mediaType: MediaType
+    let mediaType: MediaType?
     let adult: Bool
-    let originalLanguage: OriginalLanguage
+    let originalLanguage: OriginalLanguage?
     let genreIDS: [Int]
     let popularity: Double
     let firstAirDate: String?
@@ -71,4 +71,21 @@ enum OriginalLanguage: String, Codable {
     case en = "en"
     case ja = "ja"
     case ko = "ko"
+    case zh = "zh"
+    case es = "es"
+    case pt = "pt"
+    case it = "it"
+    case fr = "fr"
+    case no = "no"
+    case pl = "pl"
+    case ar = "ar"
+    case de = "de"
+    case ru = "ru"
+    case tr = "tr"
+    case hi = "hi"
+    case uk = "uk"
+    case sv = "sv"
+    case nl = "nl"
+    case cs = "cs"
+    case el = "el"
 }

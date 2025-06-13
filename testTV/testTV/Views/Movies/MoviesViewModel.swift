@@ -1,40 +1,36 @@
 //
-//  AllTitlesViewModel.swift
+//  MoviesViewModel.swift
 //  testTV
 //
-//  Created by Andres Camilo Orjuela Hurtado on 26/05/25.
+//  Created by Andres Camilo Orjuela Hurtado on 6/06/25.
 //
 
 import Foundation
 
 @Observable
-class AllTitlesViewModel {
+class MoviesViewModel {
     
     private let useCase: SearchUseCase
     
     var titles: Titles?
     var results: [Result] = []
-    var isLoading: Bool = false
-
     
     init(useCase: SearchUseCase = SearchUseCase()) {
         self.useCase = useCase
-        self.getAllTitles()
+        self.getMoviesTitles()
     }
     
-    func getAllTitles() {
+    func getMoviesTitles() {
         Task { @MainActor in
-            isLoading = true
             do {
-                titles = try await useCase.searchTitles(Endpoints.trendingTitles.rawValue)
+                titles = try await useCase.searchTitles(Endpoints.trendingMovies.rawValue)
                 results = titles?.results ?? []
                 print("Títulos: \(results)")
             } catch {
                 results = []
                 print("No lectura")
             }
-            try? await Task.sleep(for: .seconds(2)) // Da tiempo de espera para apagar el Loader
-            isLoading = false
+            
         }
     }
     

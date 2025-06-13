@@ -17,27 +17,13 @@ struct PosterView: View {
         AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/original/\(urlImage)")){ image in
             image
                 .resizable()
-                //.scaledToFit()
                 .aspectRatio(2/3, contentMode: .fit)
                 .hoverEffect(.highlight)
-                
-            //image.aspectRatio(contentMode: .fit)
-            //image.hoverEffect(.highlight)
-            //image.buttonStyle(.borderless)
-            //image.frame(width: 200)
+
         } placeholder: {
-            Color.white
+            Color.gray
+                .aspectRatio(2/3, contentMode: .fit)
         }
-        
-
-        /*
-        Image("supermanPoster")
-            .resizable()
-            .aspectRatio(78/117, contentMode: .fit)
-            .hoverEffect(.highlight)
-            .buttonStyle(.borderless)
-
-         */
     }
 }
 

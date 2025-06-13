@@ -17,4 +17,7 @@ enum Endpoints: String {
     case trendingMovies = "https://api.themoviedb.org/3/trending/movie/day"
     case trendingTVShows = "https://api.themoviedb.org/3/trending/tv/day"
     case trendingPeople = "https://api.themoviedb.org/3/trending/person/day"
+    case upcomingMovies = "https://api.themoviedb.org/3/movie/upcoming"
+    case searchMovieDetails = "https://api.themoviedb.org/3/movie/%@"
+    case searchTvSerieDetails = "https://api.themoviedb.org/3/tv/%@"
 }

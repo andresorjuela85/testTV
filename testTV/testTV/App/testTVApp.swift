@@ -11,7 +11,7 @@ import SwiftUI
 struct testTVApp: App {
     var body: some Scene {
         WindowGroup {
-            AllTitlesView()
+            MainTvView()
         }
     }
 }
